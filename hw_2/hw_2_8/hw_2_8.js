@@ -1,10 +1,8 @@
-// Завдання 4
-
-let myFirstName = prompt("Enter Your Firstname");
-console.log("myFirstName:", myFirstName);
-let myLastName = prompt("Enter Your Lastname");
-console.log(" myLastName:", myLastName);
-let age = prompt("Enter Your Age");
-console.log(" age:", age);
-let myPerson = `I am ${myFirstName} ${myLastName}. I am ${age} years old.`;
-console.log(" myPerson :", myPerson);
+let day = +prompt("Enter day of the month");
+if (day >= 0 && day <= 10) {
+  console.log("1");
+} else if (day > 10 && day <= 20) {
+  console.log("2");
+} else if (day > 20 && day <= 31) {
+  console.log("3");
+}

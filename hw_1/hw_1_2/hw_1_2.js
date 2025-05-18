@@ -1,5 +1,3 @@
-// Завдання 2
-
 let firstName;
 let middleName;
 let lastName;

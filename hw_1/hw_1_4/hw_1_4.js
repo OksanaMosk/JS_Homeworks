@@ -1,5 +1,3 @@
-// Завдання 4
-
 let myFirstName = prompt("Enter Your Firstname");
 console.log("myFirstName:", myFirstName);
 let myLastName = prompt("Enter Your Lastname");

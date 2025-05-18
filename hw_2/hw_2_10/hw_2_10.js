@@ -1,10 +1,10 @@
-// Завдання 4
+let firstNumber = +prompt("Enter the first number");
+let secondNumber = +prompt("Enter the second number");
 
-let myFirstName = prompt("Enter Your Firstname");
-console.log("myFirstName:", myFirstName);
-let myLastName = prompt("Enter Your Lastname");
-console.log(" myLastName:", myLastName);
-let age = prompt("Enter Your Age");
-console.log(" age:", age);
-let myPerson = `I am ${myFirstName} ${myLastName}. I am ${age} years old.`;
-console.log(" myPerson :", myPerson);
+if (firstNumber > secondNumber) {
+  console.log(firstNumber);
+} else if (firstNumber < secondNumber) {
+  console.log(secondNumber);
+} else if (firstNumber === secondNumber) {
+  console.log(firstNumber);
+}

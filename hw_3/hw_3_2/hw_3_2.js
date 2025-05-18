@@ -1,11 +1,9 @@
-// Завдання 2
-
-let firstName;
-let middleName;
-let lastName;
-firstName = "Оксана";
-middleName = "Ярославівна";
-lastName = "Москальова";
-// let person = `${firstName} ${middleName} ${lastName}`;
-let person = firstName + " " + middleName + " " + lastName;
-console.log(" person:", person);
+for (let i = 0; i < 10; i++) {
+  if (document.readyState === "loading") {
+    document.write(`<div>Okten is cool ${i}</div>`);
+  } else {
+    const container = document.createElement("div");
+    container.innerHTML = `<div>Okten is cool ${i}</div>`;
+    document.body.appendChild(container);
+  }
+}

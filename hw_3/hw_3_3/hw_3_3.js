@@ -1,7 +1,12 @@
-// Завдання 3
-let a = 100;
-let b = "100";
-let c = true;
-console.log("тип a:", typeof a);
-console.log("тип b:", typeof b);
-console.log("тип c:", typeof c);
+let i = 0;
+while (i <= 20) {
+  if (document.readyState === "loading") {
+    document.write(`<h1>Okten is cool ${i}</h1>`);
+  } else {
+    const container = document.createElement("div");
+    container.innerHTML = `<h1>Okten is cool ${i}</h1>`;
+    document.body.appendChild(container);
+  }
+    i++;
+}
+
