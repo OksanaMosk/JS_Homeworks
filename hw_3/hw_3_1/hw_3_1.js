@@ -52,18 +52,10 @@ const array = [
 ];
 
 for (let i = 0; i < 10; i++) {
-  const html = `
+  document.write(`
       <div>
         <p>${array[i].description}</p>
         <img src="${array[i].image}" alt="${array[i].description}" style="max-width: 300px;">
       </div>
-    `;
-
-  if (document.readyState === "loading") {
-    document.write(html);
-  } else {
-    const container = document.createElement("div");
-    container.innerHTML = html;
-    document.body.appendChild(container);
-  }
+    `);
 }
