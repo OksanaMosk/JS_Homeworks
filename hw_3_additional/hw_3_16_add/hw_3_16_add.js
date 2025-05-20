@@ -1,61 +1,116 @@
-const array = [
+let books = [
   {
-    description: "Gerbera",
-    image:
-      "https://media.istockphoto.com/id/2030878699/uk/%D1%84%D0%BE%D1%82%D0%BE/gerbera-flowers-close-up.jpg?s=2048x2048&w=is&k=20&c=XzvJl83GBVGY3uKYIvx7L88GXCcdfkhG8_BD1JFOnn0=",
+    title: "The Book Thief",
+    pages: 550,
+    authors: ["Markus Zusak"],
+    genres: ["Historical", "Novel", "War"],
   },
   {
-    description: "Orchids",
-    image:
-      "https://cdn.pixabay.com/photo/2017/06/05/08/08/orchids-2373204_1280.jpg",
+    title: "To Kill a Mockingbird",
+    pages: 281,
+    authors: ["Harper Lee"],
+    genres: ["Novel", "Drama"],
   },
   {
-    description: "Buds",
-    image:
-      "https://cdn.pixabay.com/photo/2020/04/26/18/50/spring-5096680_1280.jpg",
+    title: "War and Peace",
+    pages: 1225,
+    authors: ["Leo Tolstoy"],
+    genres: ["Historical"],
   },
   {
-    description: "Rose",
-    image:
-      "https://cdn.pixabay.com/photo/2020/06/16/12/32/rose-flower-5305496_1280.jpg",
+    title: "The Great Gatsby",
+    pages: 180,
+    authors: ["F. Scott Fitzgerald"],
+    genres: ["Novel", "Tragedy"],
+  },
+
+  {
+    title: "1984",
+    pages: 328,
+    authors: ["George Orwell"],
+    genres: [
+      "Dystopian",
+      "Historical",
+      "Political fiction",
+      "Social science fiction",
+    ],
   },
   {
-    description: "Moody",
-    image:
-      "https://cdn.pixabay.com/photo/2017/06/04/21/36/moody-2372252_1280.jpg",
+    title: "The Catcher in the Rye",
+    pages: 277,
+    authors: ["J.D. Salinger"],
+    genres: ["Novel", "Realistic fiction"],
   },
   {
-    description: "Lilas",
-    image:
-      "https://cdn.pixabay.com/photo/2017/06/05/08/08/orchids-2373204_1280.jpg",
+    title: "Moby-Dick",
+    pages: 635,
+    authors: ["Herman Melville"],
+    genres: ["Adventure", "Epic"],
   },
   {
-    description: "Flower",
-    image:
-      "https://cdn.pixabay.com/photo/2018/07/01/22/31/flowers-3510626_1280.jpg",
+    title: "The Lord of the Rings",
+    pages: 1216,
+    authors: ["J.R.R. Tolkien"],
+    genres: ["Fantasy", "Adventure"],
   },
+
   {
-    description: "Daisie",
-    image:
-      "https://cdn.pixabay.com/photo/2020/06/08/09/18/daisies-5273742_1280.jpg",
+    title: "Pride and Prejudice",
+    pages: 279,
+    authors: ["Jane Austen"],
+    genres: ["Romantic fiction", "Novel"],
   },
+
   {
-    description: "Pion",
-    image:
-      "https://cdn.pixabay.com/photo/2020/01/02/17/52/pion-4736447_1280.jpg",
-  },
-  {
-    description: "Spring Flowers",
-    image:
-      "https://cdn.pixabay.com/photo/2017/09/28/22/16/spring-2797274_1280.jpg",
+    title: "Good Omens",
+    pages: 412,
+    authors: ["Neil Gaiman", "Terry Pratchett"],
+    genres: ["Fantasy", "Comedy", "Satire"],
   },
 ];
 
-for (let i = 0; i < 10; i++) {
-  document.write(`
-      <div>
-        <p>${array[i].description}</p>
-        <img src="${array[i].image}" alt="${array[i].description}" style="max-width: 300px;">
-      </div>
-    `);
+let biggestBook = books[0];
+
+for (let i = 0; i < books.length; i++) {
+  if (books[i].pages > biggestBook.pages) {
+    biggestBook = books[i];
+    document.write(`Найбільша книжка: "${books[i].title}"  <br>`);
+    console.log(biggestBook);
+  }
+}
+
+let biggestGenre = books[0].genres.length;
+let biggestGenreBook = books[0];
+for (let i = 0; i < books.length; i++) {
+  if (books[i].genres.length > biggestGenre) {
+    biggestGenre = books[i].genres.length;
+    biggestGenreBook = books[i];
+  }
+}
+document.write(`Найбільшtе Жанрів: "${biggestGenreBook.title}" <br>`);
+console.log(biggestGenreBook);
+
+let largeTitle = books[0].title.length;
+let largeTitleBook = books[0];
+for (let i = 0; i < books.length; i++) {
+  if (books[i].title.length > largeTitle) {
+    largeTitle = books[i].title.length;
+    largeTitleBook = books[i];
+  }
+}
+document.write(`Найдовша назва:  "${largeTitleBook.title}" <br>`);
+console.log(largeTitleBook);
+
+for (let i = 0; i < books.length; i++) {
+  if (books[i].authors.length === 2) {
+    document.write(`Два Автора: "${books[i].title}" <br>`);
+    console.log(books[i]);
+  }
+}
+
+for (let i = 0; i < books.length; i++) {
+  if (books[i].authors.length === 1) {
+    document.write(`Один Автор: "${books[i].title}" <br>`);
+    console.log(books[i]);
+  }
 }

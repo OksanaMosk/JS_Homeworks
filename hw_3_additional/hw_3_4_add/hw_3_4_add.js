@@ -1,4 +1,4 @@
-let array = [2, 17, 13, 6, 22, 31, 45, 66, 100, -18];
+let array = [25, 137, 123, 1000, 202, 371, 245, 166, 1200, -108];
 for (let i = 0; i < array.length; i++) {
-  document.write(`${array[i]};`);
+  console.log(array[i]);
 }
