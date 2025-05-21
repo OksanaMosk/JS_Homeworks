@@ -1,10 +1,10 @@
-// Завдання 4
+function writer(text, num) {
+  document.write("<ul>");
+  let array = [];
+  for (let i = 0; i < num; i++) {
+    document.write(`<li>${text}</li>`);
+  }
+  document.write("</ul>");
+}
 
-let myFirstName = prompt("Enter Your Firstname");
-console.log("myFirstName:", myFirstName);
-let myLastName = prompt("Enter Your Lastname");
-console.log(" myLastName:", myLastName);
-let age = prompt("Enter Your Age");
-console.log(" age:", age);
-let myPerson = `I am ${myFirstName} ${myLastName}. I am ${age} years old.`;
-console.log(" myPerson :", myPerson);
+writer("Lorem ipsum dolor sit amet, consectetur", 10);
