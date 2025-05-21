@@ -1,61 +1,34 @@
-const array = [
-  {
-    description: "Gerbera",
-    image:
-      "https://media.istockphoto.com/id/2030878699/uk/%D1%84%D0%BE%D1%82%D0%BE/gerbera-flowers-close-up.jpg?s=2048x2048&w=is&k=20&c=XzvJl83GBVGY3uKYIvx7L88GXCcdfkhG8_BD1JFOnn0=",
-  },
-  {
-    description: "Orchids",
-    image:
-      "https://cdn.pixabay.com/photo/2017/06/05/08/08/orchids-2373204_1280.jpg",
-  },
-  {
-    description: "Buds",
-    image:
-      "https://cdn.pixabay.com/photo/2020/04/26/18/50/spring-5096680_1280.jpg",
-  },
-  {
-    description: "Rose",
-    image:
-      "https://cdn.pixabay.com/photo/2020/06/16/12/32/rose-flower-5305496_1280.jpg",
-  },
-  {
-    description: "Moody",
-    image:
-      "https://cdn.pixabay.com/photo/2017/06/04/21/36/moody-2372252_1280.jpg",
-  },
-  {
-    description: "Lilas",
-    image:
-      "https://cdn.pixabay.com/photo/2017/06/05/08/08/orchids-2373204_1280.jpg",
-  },
-  {
-    description: "Flower",
-    image:
-      "https://cdn.pixabay.com/photo/2018/07/01/22/31/flowers-3510626_1280.jpg",
-  },
-  {
-    description: "Daisie",
-    image:
-      "https://cdn.pixabay.com/photo/2020/06/08/09/18/daisies-5273742_1280.jpg",
-  },
-  {
-    description: "Pion",
-    image:
-      "https://cdn.pixabay.com/photo/2020/01/02/17/52/pion-4736447_1280.jpg",
-  },
-  {
-    description: "Spring Flowers",
-    image:
-      "https://cdn.pixabay.com/photo/2017/09/28/22/16/spring-2797274_1280.jpg",
-  },
+let usersWithId = [
+  { id: 1, name: "vasya", age: 31, status: false },
+  { id: 2, name: "petya", age: 30, status: true },
+  { id: 3, name: "kolya", age: 29, status: true },
+  { id: 4, name: "olya", age: 28, status: false },
 ];
 
-for (let i = 0; i < 10; i++) {
-  document.write(`
-      <div>
-        <p>${array[i].description}</p>
-        <img src="${array[i].image}" alt="${array[i].description}" style="max-width: 300px;">
-      </div>
-    `);
+let citiesWithId = [
+  { user_id: 3, country: "USA", city: "Portland" },
+  { user_id: 1, country: "Ukraine", city: "Ternopil" },
+  { user_id: 2, country: "Poland", city: "Krakow" },
+  { user_id: 4, country: "USA", city: "Miami" },
+];
+
+let newArray = [];
+
+for (let id = 0; id < usersWithId.length; id++) {
+  for (let user_id = 0; user_id < citiesWithId.length; user_id++) {
+    if (usersWithId[id].id === citiesWithId[user_id].user_id) {
+      newArray.push({
+        id: usersWithId[id].id,
+        name: usersWithId[id].name,
+        age: usersWithId[id].age,
+        status: usersWithId[id].status,
+        address: {
+          user_id: citiesWithId[user_id].user_id,
+          country: citiesWithId[user_id].country,
+          city: citiesWithId[user_id].city,
+        },
+      });
+    }
+  }
 }
+console.log("newArray:", newArray);
