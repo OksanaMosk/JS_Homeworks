@@ -1,10 +1,11 @@
-// Завдання 4
-
-let myFirstName = prompt("Enter Your Firstname");
-console.log("myFirstName:", myFirstName);
-let myLastName = prompt("Enter Your Lastname");
-console.log(" myLastName:", myLastName);
-let age = prompt("Enter Your Age");
-console.log(" age:", age);
-let myPerson = `I am ${myFirstName} ${myLastName}. I am ${age} years old.`;
-console.log(" myPerson :", myPerson);
+function whatIsSmallestNumber(array) {
+  let smallestNumber = array[0];
+  for (let i = 1; i < array.length; i++) {
+    if (array[i] < smallestNumber) {
+      smallestNumber = array[i];
+    }
+  }
+  console.log(smallestNumber);
+  return smallestNumber;
+}
+whatIsSmallestNumber([5, 9, 6, 0, -3, 2, 3]);

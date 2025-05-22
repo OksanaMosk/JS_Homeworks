@@ -7,4 +7,4 @@ function writer(text, num) {
   document.write("</ul>");
 }
 
-writer("Lorem ipsum dolor sit amet, consectetur", 10);
+writer("Lorem ipsum dolor sit amet, consectetur", 3);

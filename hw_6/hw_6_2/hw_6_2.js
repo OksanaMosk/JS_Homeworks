@@ -1,11 +1,7 @@
-// Завдання 2
-
-let firstName;
-let middleName;
-let lastName;
-firstName = "Оксана";
-middleName = "Ярославівна";
-lastName = "Москальова";
-// let person = `${firstName} ${middleName} ${lastName}`;
-let person = firstName + " " + middleName + " " + lastName;
-console.log(" person:", person);
+let str1 = "hello world";
+let str2 = "lorem ipsum";
+let str3 = "javascript is cool";
+const lengthString = [str1, str2, str3];
+for (const item of lengthString) {
+  console.log(item.toUpperCase());
+}

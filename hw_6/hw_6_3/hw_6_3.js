@@ -1,7 +1,8 @@
-// Завдання 3
-let a = 100;
-let b = "100";
-let c = true;
-console.log("тип a:", typeof a);
-console.log("тип b:", typeof b);
-console.log("тип c:", typeof c);
+let str1 = "HELLO WORLD";
+let str2 = "LOREM IPSUM";
+let str3 = "JAVASCRIPT IS COOL";
+
+const lengthString = [str1, str2, str3];
+for (const item of lengthString) {
+  console.log(item.toLowerCase());
+}

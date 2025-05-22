@@ -1,10 +1,9 @@
-// Завдання 4
+function stringToarray(str) {
+  if (str) {
+    let s = str.split(" ");
+    return s;
+  }
+  return [""];
+}
 
-let myFirstName = prompt("Enter Your Firstname");
-console.log("myFirstName:", myFirstName);
-let myLastName = prompt("Enter Your Lastname");
-console.log(" myLastName:", myLastName);
-let age = prompt("Enter Your Age");
-console.log(" age:", age);
-let myPerson = `I am ${myFirstName} ${myLastName}. I am ${age} years old.`;
-console.log(" myPerson :", myPerson);
+console.log(stringToarray("Ревуть воли як ясла повні"));

@@ -1,10 +1,21 @@
-// Завдання 4
+const writer = (array) => {
+  document.write("<ul>");
 
-let myFirstName = prompt("Enter Your Firstname");
-console.log("myFirstName:", myFirstName);
-let myLastName = prompt("Enter Your Lastname");
-console.log(" myLastName:", myLastName);
-let age = prompt("Enter Your Age");
-console.log(" age:", age);
-let myPerson = `I am ${myFirstName} ${myLastName}. I am ${age} years old.`;
-console.log(" myPerson :", myPerson);
+  for (let i = 0; i < array.length; i++) {
+    document.write(`<li>${array[i]}</li>`);
+  }
+  document.write("</ul>");
+};
+
+writer([
+  1000,
+  "juice",
+  null,
+  false,
+  "tea",
+  NaN,
+  undefined,
+  true,
+  "strawberry",
+  123567,
+]);
