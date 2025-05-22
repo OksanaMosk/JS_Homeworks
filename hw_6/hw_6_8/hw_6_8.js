@@ -7,17 +7,12 @@ let coursesAndDurationArray = [
   { title: "Frontend", monthDuration: 4 },
 ];
 
-//  — відсортувати його за спаданням за monthDuration
+const newCoursesAndDurationArray = coursesAndDurationArray
+  .sort((a, b) => b.monthDuration - a.monthDuration)
+  .filter((value) => value.monthDuration > 5)
+  .map((value, index) => ({
+    ...value,
+    id: index + 1,
+  }));
 
-//  — відфільтрувати, залишивши тільки курси з тривалістю понад 5 місяців
-
-//  — за допомоги map перетворити кожен елемент на наступний тип {id,title,monthDuration}
-const sortMonthDuration = coursesAndDurationArray.sort(
-  (a, b) => b.monthDuration - a.monthDuration
-);
-console.log("sortMonthDuration:", sortMonthDuration);
-
-const fiveMonthDuration = coursesAndDurationArray.filter(
-  (value) => value.monthDuration > 5
-);
-console.log("fiveMonthDuration:", fiveMonthDuration);
+console.log(" newCoursesAndDurationArray:", newCoursesAndDurationArray);
