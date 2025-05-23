@@ -17,17 +17,18 @@ for (const value of values) {
 }
 console.log(" cards:", cards);
 
-cards.reduce(
+let cardsReduce = cards.reduce(
   (accumulator, card) => {
     if (card.cardSuit === "spade") {
       accumulator.spades.push(card);
     } else if (card.cardSuit === "diamond") {
-      accumulator.spades.push(card);
+      accumulator.diamonds.push(card);
     } else if (card.cardSuit === "heart") {
-      accumulator.spades.push(card);
+      accumulator.hearts.push(card);
     } else if (card.cardSuit === "club") {
-      accumulator.spades.push(card);
+      accumulator.clubs.push(card);
     }
+    return accumulator;
   },
   {
     spades: [],
@@ -39,3 +40,4 @@ cards.reduce(
     clubs: [],
   }
 );
+console.log(" cardsReduce:", cardsReduce);
