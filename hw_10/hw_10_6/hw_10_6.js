@@ -1,10 +1,7 @@
-// Завдання 4
-
-let myFirstName = prompt("Enter Your Firstname");
-console.log("myFirstName:", myFirstName);
-let myLastName = prompt("Enter Your Lastname");
-console.log(" myLastName:", myLastName);
-let age = prompt("Enter Your Age");
-console.log(" age:", age);
-let myPerson = `I am ${myFirstName} ${myLastName}. I am ${age} years old.`;
-console.log(" myPerson :", myPerson);
+let myInput = document.getElementById("input");
+let divResult = document.getElementById("result");
+myInput.oninput = function () {
+  let kilos = +myInput.value;
+  let myResult = kilos * 2.2;
+  divResult.innerText = (kilos * 2.2).toFixed(2);
+};

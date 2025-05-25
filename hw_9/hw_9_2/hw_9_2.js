@@ -1,11 +1,8 @@
-// Завдання 2
-
-let firstName;
-let middleName;
-let lastName;
-firstName = "Оксана";
-middleName = "Ярославівна";
-lastName = "Москальова";
-// let person = `${firstName} ${middleName} ${lastName}`;
-let person = firstName + " " + middleName + " " + lastName;
-console.log(" person:", person);
+const array = ["Main", "Products", "About us", "Contacts"];
+let menu = document.createElement("ul");
+for (const item of array) {
+  let li = document.createElement("li");
+  li.innerText = item;
+  menu.appendChild(li);
+}
+document.body.appendChild(menu);

@@ -1,10 +1,13 @@
-// Завдання 4
-
-let myFirstName = prompt("Enter Your Firstname");
-console.log("myFirstName:", myFirstName);
-let myLastName = prompt("Enter Your Lastname");
-console.log(" myLastName:", myLastName);
-let age = prompt("Enter Your Age");
-console.log(" age:", age);
-let myPerson = `I am ${myFirstName} ${myLastName}. I am ${age} years old.`;
-console.log(" myPerson :", myPerson);
+function addToLocalStorage(arrayName, objToAdd) {
+  let storage = localStorage.getItem(arrayName);
+  console.log(" storage:", storage);
+  if (!storage) {
+    throw new Error("there is no array");
+  }
+  const array = JSON.parse(storage);
+  if (typeof objToAdd === "object") {
+    array.push(objToAdd);
+  }
+  localStorage.setItem(arrayName, JSON.stringify(array));
+}
+addToLocalStorage("sessionsList", {});

@@ -1,10 +1,24 @@
-// Завдання 4
+let formGenerate = document.forms["someForm"];
+let tableResult = document.getElementById("table");
+let buttonGenerate = document.getElementsByTagName("button");
 
-let myFirstName = prompt("Enter Your Firstname");
-console.log("myFirstName:", myFirstName);
-let myLastName = prompt("Enter Your Lastname");
-console.log(" myLastName:", myLastName);
-let age = prompt("Enter Your Age");
-console.log(" age:", age);
-let myPerson = `I am ${myFirstName} ${myLastName}. I am ${age} years old.`;
-console.log(" myPerson :", myPerson);
+formGenerate.onsubmit = function (e) {
+  e.preventDefault();
+  let linesValue = +formGenerate.lines.value;
+  console.log(" linesValue :", linesValue);
+  let cellsValue = +formGenerate.cells.value;
+  console.log(" cellsValue:", cellsValue);
+  let dataValue = formGenerate.data.value;
+  console.log("  dataValue :", dataValue);
+
+  tableResult.innerHTML = "";
+  for (let i = 0; i < linesValue; i++) {
+    const tr = document.createElement("tr");
+    for (let j = 0; j < cellsValue; j++) {
+      const td = document.createElement("td");
+      td.innerText = dataValue;
+      tr.appendChild(td);
+    }
+    tableResult.appendChild(tr);
+  }
+};

@@ -1,7 +1,22 @@
-// Завдання 3
-let a = 100;
-let b = "100";
-let c = true;
-console.log("тип a:", typeof a);
-console.log("тип b:", typeof b);
-console.log("тип c:", typeof c);
+const myForm = document.forms.someForm;
+myForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const yourNameValue = document.someForm.name.value;
+  const yourSurNameValue = document.someForm.surname.value;
+  const yourAgeValue = +document.someForm.age.value;
+
+  const object = { yourNameValue, yourSurNameValue, yourAgeValue };
+  // console.log(object);
+
+  const isBlock = document.querySelectorAll("div")[0];
+  if (isBlock) {
+    isBlock.remove();
+  }
+  const block = document.createElement("div");
+  block.classList.add("target");
+  document.body.appendChild(block);
+
+  block.innerText = `Name: ${object.yourNameValue}\n 
+  Surname: ${object.yourSurNameValue}\n
+    Age: ${object.yourAgeValue}`;
+});
