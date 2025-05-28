@@ -1,3 +1,9 @@
+.wrap {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
 .sectionMovie {
   margin: 0;
   padding: 0;
@@ -10,16 +16,30 @@ h1 {
   height: 10vh;
 }
 button {
-  width: 220px;
+  width: 120px;
   height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: bold;
   background-color: darkgray;
-  color: black;
+  color: white;
   border: none;
-  border-radius: 10px;
-  margin-top: 40vh;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+button:hover:not(:disabled) {
+  background-color: black;
 }
 
+button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
 .items {
+  width: 80vw;
   margin: 0;
   height: 100%;
   display: flex;
