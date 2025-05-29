@@ -516,88 +516,6 @@ const arrayMovie = [
     name: "No One Knows About Persian Cats",
     image: "https://image.tmdb.org/t/p/w500/fhsZEUHpo6hRw4IKJE5qL2oRiUb.jpg",
   },
-  // {
-  //   name: "About the Looking for and the Finding of Love",
-  //   image: "https://image.tmdb.org/t/p/w500/eauZ3KLBcBejZDyXge5HoWJ6zwn.jpg",
-  // },
-  // {
-  //   name: "More About the Children of Noisy Village",
-  //   image: "https://image.tmdb.org/t/p/w500/jUOOU0Bh8OwA7dOwI4BjSIXWHoO.jpg",
-  // },
-  // {
-  //   name: "Shake It All About",
-  //   image: "https://image.tmdb.org/t/p/w500/o8sFFXc8bVqE2BM2dUnUxGFFZGi.jpg",
-  // },
-  // {
-  //   name: "Crazy About Work",
-  //   image: "https://image.tmdb.org/t/p/w500/iPS4ju4Po7n7RIpR4yRMSw3k8oG.jpg",
-  // },
-  // {
-  //   name: "It's All About Karma",
-  //   image: "https://image.tmdb.org/t/p/w500/3PQ3CXBQce5OPBD3cPRis58XxqA.jpg",
-  // },
-
-  // {
-  //   name: "Today We'll Talk About That Day",
-  //   image: "https://image.tmdb.org/t/p/w500/630vGcdsSl0uebIrOgOAYNkXacz.jpg",
-  // },
-
-  // {
-  //   name: "Aliens",
-  //   image: "https://image.tmdb.org/t/p/w500/r1x5JGpyqZU8PYhbs4UcrO1Xb6x.jpg",
-  // },
-  // {
-  //   name: "Luis and the Aliens",
-  //   image: "https://image.tmdb.org/t/p/w500/5oq7s5ru4hjp83mi4fWSJ0L7yUA.jpg",
-  // },
-  // {
-  //   name: "Monsters vs Aliens",
-  //   image: "https://image.tmdb.org/t/p/w500/hpHarddVj34j53T7NsoUGdKj4mP.jpg",
-  // },
-  // {
-  //   name: "Ghosts vs. Aliens",
-  //   image: "https://image.tmdb.org/t/p/w500/6nJb4LD47jGWcK2Pbmvu7fP0YzD.jpg",
-  // },
-  // {
-  //   name: "Ghosts vs. Aliens 02",
-  //   image: "https://image.tmdb.org/t/p/w500/r2lImjA2TUDu7UM9JiWESVGez0a.jpg",
-  // },
-  // {
-  //   name: "The Aliens",
-  //   image: "https://image.tmdb.org/t/p/w500/zypAgUl0E8eHHOeoJIVlMgDH8dU.jpg",
-  // },
-  // {
-  //   name: "Alien from the Darkness",
-  //   image: "https://image.tmdb.org/t/p/w500/dbxpznxnTpR5MCl0bdDRor7j4qK.jpg",
-  // },
-  // {
-  //   name: "Maybe Aliens",
-  //   image: "https://image.tmdb.org/t/p/w500/s2Qj6AxTGgsYa1VVhxP4UyW3L1T.jpg",
-  // },
-  // {
-  //   name: "Aliens & Gufors",
-  //   image: "https://image.tmdb.org/t/p/w500/QNkOZWXhSxEwPsqwjqFZlzDASN.jpg",
-  // },
-  // {
-  //   name: "Mutant Aliens",
-  //   image: "https://image.tmdb.org/t/p/w500/f6doYuJsaciPllLKy2VGWGLWXaV.jpg",
-  // },
-  // {
-  //   name: "Alien Warfare",
-  //   image: "https://image.tmdb.org/t/p/w500/rJOj0T5DyChfECevDg0xpEGznsl.jpg",
-  // },
-  // {
-  //   name: "Monsters vs Aliens: Creature Features",
-  //   image: "https://image.tmdb.org/t/p/w500/wJaq46vIUn8jSx1wJiS06kDO6cb.jpg",
-  // },
-  // {
-  //   name: "Little Tito and the Aliens",
-  //   image: "https://image.tmdb.org/t/p/w500/wjqGlVG8tvtuZkZvvHNprdgCB1a.jpg",
-  // },
-  // {
-  //   name: "Kids vs. Aliens",
-  //   image: "https://image.tmdb.org/t/p/w500/f87UCQzVwMlzGFePtCtZS4TgAFp.jpg",
-  // },
 ];
 
 const butPrev = document.getElementsByTagName("button")[0];
@@ -634,18 +552,17 @@ function updateList() {
   }
 
   const container = document.querySelector(".sectionMovie");
-  container.insertAdjacentElement("afterend", listOfMovie);
-  // sectionMovie.appendChild(listOfMovie);
+  container.appendChild(listOfMovie);
 
   if (currentPage === 0) {
-    butPrev.style.display = "none";
+    butPrev.style.visibility = "hidden";
   } else {
-    butPrev.style.display = "flex";
+    butPrev.style.visibility = "visible";
   }
   if (currentPage >= Math.ceil(arrayMovie.length / itemsPage) - 1) {
-    butNext.style.display = "none";
+    butNext.style.visibility = "hidden";
   } else {
-    butNext.style.display = "flex";
+    butNext.style.visibility = "visible";
   }
 
   butPrev.disabled = currentPage === 0;
